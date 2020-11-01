@@ -1,0 +1,16 @@
+(load "JsonStructure.lisp")
+(load "JsonData.lisp")
+
+(print (JsonStructure ""))
+(print (JsonStructure "{}"))
+(print (JsonStructure "{'a':4}"))
+(print (JsonStructure "{'a':{'b':4}}"))
+(print (JsonStructure "{'z':[{'a':1,'b':2},{'a':3,'b':4}]}"))
+(print (JsonStructure "{'z':[[{'a':1,'b':2}],[{'a':3,'b':4}]]}"))
+(print (JsonStructure "{'z':[{'a':['x':9,'y':8],'b':2},{'c':3,'d':4}]}"))
+(print (JsonStructure "{'employees':[{'a':{'a':1},'b':{'b':2}},{'a':3,'b':4}]}"))
+
+(print (JsonData "{'a':4}" "a"))
+(print (JsonData "{'z':[{'a':1},{'b':2},{'c':3}]}" "b"))
+(print (JsonData "{'z':[{'a':1,'b':2},{'c':3,'d':4}]}" "a"))
+(print (JsonData "{'z':[{'a':['x':9,'y':8],'b':2},{'c':3,'d':4}]}" "x"))
